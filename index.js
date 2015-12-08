@@ -20,7 +20,7 @@ function update() {
   var myurl = "http://www.oddschecker.com/football/football-coupons/bumper-coupon";
   //var myurl = "http://www.oddschecker.com/football/english/fa-cup";
   var arbCount = 0;
-  console.log('scrape requested');
+  console.log('scrape requested 2');
 
   var options = {
     url: myurl,
