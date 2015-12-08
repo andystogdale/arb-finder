@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="arbGetter">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Arbs</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:20px; }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+<body ng-controller="mainController">
+    <div class="container">
+
+        <h1>Arbs</h1>
+        
+        <div ng-repeat="arb in arbs | orderBy:'totalPercentage'">
+            <div>Match: {{arb.matchName}} - {{formatNumber(arb.totalPercentage)}}</div>
+            <div>Home: {{arb.homePrice}}, {{formatNumber(arb.homePercentage)}}</div>
+            <div>Draw: {{arb.drawPrice}}, {{formatNumber(arb.drawPercentage)}}</div>
+            <div>Away: {{arb.awayPrice}}, {{formatNumber(arb.awayPercentage)}}</div>
+            <div><a href="{{arb.linkAddress}}" target="_blank">Go To Match</a></div>
+            <br />
+        </div>
+
+
+    </div>
+
+</body>
+</html>
