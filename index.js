@@ -12,6 +12,7 @@ app.get('/scrape', function(req, res) {
 });
 
 app.get('/arbs', function(req, res) {
+    console.log("/abrs requested");
     res.send(arbs);
 });
 
