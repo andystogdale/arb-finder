@@ -1,2 +1,10 @@
 #! /bin/bash
+
+minute=$(date '+%M')
+n=$(($minute%5))
+if [ $n != 0 ]; then
+    echo 'not a 5 min interval, exiting'
+    exit
+fi
+echo '5 min interval, updating'
 curl http://arbfinder-arbfinder.rhcloud.com/scrape
