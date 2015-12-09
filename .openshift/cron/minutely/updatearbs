@@ -7,4 +7,4 @@ if [ $n != 0 ]; then
     exit
 fi
 echo '5 min interval, updating'
-curl http://arbfinder-arbfinder.rhcloud.com/scrape
+curl http://arbfinder-andystogdale.rhcloud.com/scrape
